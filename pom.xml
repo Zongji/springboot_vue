@@ -47,6 +47,7 @@
                 <version>1.6.0</version>
                 <executions>
                     <execution>
+                        <!-- 执行yarn install 安装前端工程的依赖-->
                         <id>build frontend --install</id>
                         <phase>prepare-package</phase>
                         <goals>
@@ -60,6 +61,7 @@
                         </configuration>
                     </execution>
                     <execution>
+                        <!-- 构建前端工程-->
                         <id>build frontend --build</id>
                         <phase>prepare-package</phase>
                         <goals>
@@ -83,6 +85,7 @@
                 <version>3.2.0</version>
                 <executions>
                     <execution>
+                        <!-- 复制index.html文件-->
                         <id>copy front-end template to target</id>
                         <phase>prepare-package</phase>
                         <goals>

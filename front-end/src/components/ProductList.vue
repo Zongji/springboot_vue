@@ -11,13 +11,15 @@ export default {
   props: {
     msg: String
   },
-  data:function(){
-    
+  data(){
+    return {
+      list:[]
+    }
   },
   created() {
-    axios.get("/products")
+    axios.get("/api/product/products")
     .then(res => {
-        console.info(res);
+        console.info(res.data);
     }).catch(err => {
         console.error(err);
     })
